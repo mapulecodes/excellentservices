@@ -1,23 +1,59 @@
 /* =========================================================
-   BLOG ARTICLE EXPAND/COLLAPSE
+   INSIGHTS ARTICLE READER
    ========================================================= */
-function toggleArticle(btn) {
-  const card = btn.closest('.blog-card');
-  const body = card.querySelector('.blog-article-body');
-  const isOpen = body.classList.contains('open');
-  document.querySelectorAll('.blog-article-body.open').forEach(el => {
-    el.classList.remove('open');
-    const otherBtn = el.closest('.blog-card').querySelector('.blog-more');
-    if (otherBtn) {
-      otherBtn.setAttribute('aria-expanded', 'false');
-      otherBtn.innerHTML = 'Read Article <i class="bi bi-arrow-down"></i>';
-    }
-  });
-  if (!isOpen) {
-    body.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
-    btn.innerHTML = 'Close Article <i class="bi bi-arrow-up"></i>';
-    setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+var _activeInsightBtn = null;
+
+function openInsight(btn, articleId) {
+  var reader    = document.getElementById('insightReader');
+  var content   = document.getElementById('readerContent');
+  var catEl     = document.getElementById('readerCat');
+  var dateEl    = document.getElementById('readerDate');
+  var card      = btn.closest('.insight-card');
+  var tpl       = document.getElementById(articleId);
+
+  if (!reader || !tpl) return;
+
+  // Toggle off if same article clicked again
+  if (_activeInsightBtn === btn && !reader.hidden) {
+    closeInsight();
+    return;
+  }
+
+  // Reset previous active card/button
+  if (_activeInsightBtn && _activeInsightBtn !== btn) {
+    _activeInsightBtn.setAttribute('aria-expanded', 'false');
+    _activeInsightBtn.innerHTML = 'Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i>';
+    var prevCard = _activeInsightBtn.closest('.insight-card');
+    if (prevCard) prevCard.classList.remove('is-active');
+  }
+
+  // Populate reader
+  if (catEl)  catEl.textContent  = card.querySelector('.insight-cat').textContent;
+  if (dateEl) dateEl.textContent = card.querySelector('.insight-date-label').textContent;
+  content.innerHTML = tpl.innerHTML;
+
+  // Show reader
+  reader.hidden = false;
+  card.classList.add('is-active');
+  btn.setAttribute('aria-expanded', 'true');
+  btn.innerHTML = 'Close Article <i class="bi bi-arrow-up" aria-hidden="true"></i>';
+  _activeInsightBtn = btn;
+
+  // Smooth scroll to reader
+  setTimeout(function() {
+    reader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 60);
+}
+
+function closeInsight() {
+  var reader = document.getElementById('insightReader');
+  if (reader) reader.hidden = true;
+  if (_activeInsightBtn) {
+    _activeInsightBtn.setAttribute('aria-expanded', 'false');
+    _activeInsightBtn.innerHTML = 'Read Article <i class="bi bi-arrow-right" aria-hidden="true"></i>';
+    var card = _activeInsightBtn.closest('.insight-card');
+    if (card) card.classList.remove('is-active');
+    _activeInsightBtn = null;
   }
 }
 
