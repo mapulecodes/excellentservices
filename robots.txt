@@ -1,0 +1,11 @@
+# Excellent Services — robots.txt
+# https://www.excellentservices.co.za
+
+User-agent: *
+Allow: /
+
+# Block admin or non-public paths (none currently)
+Disallow: /thank-you/
+
+# Sitemap
+Sitemap: https://www.excellentservices.co.za/sitemap.xml
