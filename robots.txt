@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-# Block admin or non-public paths (none currently)
+
 Disallow: /thank-you/
 
 # Sitemap
