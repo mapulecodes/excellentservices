@@ -2192,3 +2192,33 @@
     .insight-body { padding: 1.25rem; }
     .insight-footer { padding: 1rem 1.25rem 1.25rem; }
   }
+
+@media (max-width: 1024px) {
+  .hero { min-height: auto; }
+  .hero-left { min-height: 0; }
+}
+
+@media (max-width: 768px) {
+  .hero-left { min-height: 0; padding: 3.5rem 0; }
+  .hero-left-inner { padding: 0 1rem; }
+  .hero-title { font-size: clamp(2rem, 8vw, 3rem); line-height: 1.15; }
+  .hero-body { font-size: 1rem; line-height: 1.7; }
+  .hero-actions { margin-bottom: 2rem; }
+  .hero-credentials { padding-top: 1.5rem; }
+  .nav-hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+  .mobile-menu { padding-bottom: max(2rem, env(safe-area-inset-bottom)); }
+  .mobile-menu a { min-height: 44px; }
+}
+
+@media (max-width: 480px) {
+  .hero-left { padding: 2.75rem 0; }
+  .hero-title { font-size: clamp(1.9rem, 8.5vw, 2.5rem); }
+  .hero-cred { min-width: 0; }
+}
+
+.nav-hamburger:focus-visible,
+.mobile-menu a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
