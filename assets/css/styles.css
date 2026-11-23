@@ -2222,3 +2222,29 @@
   outline: 3px solid var(--teal);
   outline-offset: 3px;
 }
+
+@media (max-width: 1024px) {
+  .hero { display: flex; flex-direction: column; padding-top: var(--total-nav); }
+  .hero-right { display: block; order: -1; height: clamp(240px, 42vw, 390px); flex: none; }
+  .hero-right::before { background: linear-gradient(0deg, rgba(13,27,62,0.3), transparent 60%); }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .hero-left { min-height: 0; width: 100%; }
+  .hero-left-inner { max-width: 760px; }
+  .hero-badge-strip { bottom: 1rem; right: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .hero-right { height: clamp(220px, 62vw, 310px); }
+  .hero-badge-strip { display: none; }
+  .hero-left { padding: 2.75rem 0 3rem; }
+  .hero-credentials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+  .hero-cred, .hero-cred + .hero-cred { min-width: 0; padding: 0; border: 0 !important; }
+  .hero-cred:last-child { padding: 0; }
+  .hero-actions { margin-bottom: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-right { height: 245px; }
+  .hero-left { padding: 2.25rem 0 2.75rem; }
+  .hero-cred-num { font-size: 1.65rem; }
+}
