@@ -352,10 +352,11 @@ async function submitQuoteForm() {
   const prop    = getRadioValue('property');
   const freq    = getRadioValue('frequency');
   const nextBtn = document.getElementById('quoteNext');
+  const botcheck = document.querySelector('#quoteForm [name="botcheck"]');
+  if (botcheck && botcheck.checked) return;
+  if (nextBtn.disabled) return;
   nextBtn.classList.add('btn-loading');
   nextBtn.disabled = true;
-  const botcheck = document.querySelector('[name="botcheck"]');
-  if (botcheck && botcheck.checked) return;
   const payload = {
     access_key:        'efe0368e-0d20-497c-a657-4171eb0cd781',
     subject:           'Assessment & Quote Request — Excellent Services Website',
