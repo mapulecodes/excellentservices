@@ -294,5 +294,5 @@
   <a href="https://wa.me/27692396132" class="wa-float" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer" onclick="gtag('event','click',{event_category:'WhatsApp',event_label:'WhatsApp Click'})"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
   <div class="toast" id="toast" role="alert" aria-live="polite"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span id="toastMessage"></span></div>
   <script src="/assets/js/main.js"></script>
-</body>
+<script>(()=>{const product=new URLSearchParams(location.search).get('product');const notes=document.getElementById('qNotes');if(!product||!notes)return;const name=product.trim().slice(0,200);if(!name)return;notes.value='Product enquiry: '+name+'\n';const banner=document.createElement('p');banner.textContent='Selected product: '+name;banner.style.fontWeight='600';banner.setAttribute('role','status');const form=document.getElementById('quoteForm');if(form)form.before(banner)})();</script></body>
 </html>

@@ -470,3 +470,5 @@ document.querySelectorAll('.nav-logo img').forEach(img => {
     if (img.closest('.nav-logo')) img.style.objectFit = 'contain';
   });
 });
+
+(()=>{if(!location.pathname.startsWith('/products/'))return;document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('a[href="/quote/"]').forEach(a=>{const card=a.closest('.product-card');const name=card?.querySelector('.product-name')?.textContent.trim()||(location.pathname.startsWith('/products/item/')&&a.closest('.item-layout')?document.querySelector('h1')?.textContent.trim():null);if(name)a.href='/quote/?product='+encodeURIComponent(name)})})})();
