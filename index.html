@@ -67,7 +67,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 <style>
 .home-services .section-head{text-align:center;margin:0 auto 2.5rem}.home-services .section-lead{margin:1rem auto 0;max-width:680px}.home-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.home-service-tile{display:flex;flex-direction:column;align-items:flex-start;padding:30px;background:#fff;border:1px solid #dce3e9;border-radius:8px;text-decoration:none;color:var(--navy);transition:background .2s,border-color .2s,transform .2s}.home-service-tile:hover,.home-service-tile:focus-visible{background:#f5faf9;border-color:#008b84;transform:translateY(-3px)}.home-service-icon{font-size:2.3rem;color:#008b84;line-height:1;margin-bottom:20px}.home-service-tile h3{font-size:1.2rem;line-height:1.35;margin:0 0 12px}.home-service-tile p{font-size:1rem;line-height:1.65;color:var(--text-muted);margin:0 0 24px}.home-service-link{display:flex;align-items:center;gap:8px;margin-top:auto;color:#007b75;font-weight:600;font-size:.95rem}@media(max-width:900px){.home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.home-service-grid{grid-template-columns:1fr;gap:12px}.home-service-tile{padding:22px}.home-services .section-head{margin-bottom:1.5rem}}
-</style></head>
+</style><style>.home-search-toggle{border:0;background:transparent;color:var(--navy);font-size:1.25rem;cursor:pointer;padding:10px;flex-shrink:0}.home-search-dialog{position:fixed;inset:0;margin:auto;width:min(620px,92vw);max-height:80vh;overflow:auto;border:1px solid #dce3e9;border-radius:10px;padding:24px;background:white;color:var(--navy);z-index:9999}.home-search-dialog::backdrop{background:#101e39aa}.home-search-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.home-search-top button{background:none;border:0;padding:10px;cursor:pointer}.home-search-dialog input{width:100%;padding:12px;border:1px solid #a9b4c1;border-radius:5px;margin:8px 0 16px;font:inherit}.home-search-dialog a{display:block;padding:12px 0;border-bottom:1px solid #e5e9ed;color:var(--navy)}.home-brand-band{background:#f7f8f9;padding:26px 0;border-bottom:1px solid #e5e9ed}.home-brand-band .container{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.home-brand-band p{font-size:.9rem;font-weight:600;margin:0}.home-brand-names{display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,48px);flex-wrap:wrap;color:#35465b;font-size:1.1rem;font-weight:700}.home-brand-band a{color:#007b75;font-weight:600;font-size:.9rem}@media(max-width:700px){.home-brand-band .container{flex-direction:column;gap:16px}.home-brand-names{font-size:1rem}.home-search-toggle{display:inline-flex}}</style></head>
 <body>
   <div class="top-bar" id="topBar">
     <div class="container">
@@ -122,7 +122,7 @@
           <li><a href="/blog/">Insights</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
-        <div class="nav-actions">
+        <div class="nav-actions"><button type="button" class="home-search-toggle" aria-label="Search website" id="homeSearchOpen"><i class="bi bi-search" aria-hidden="true"></i></button>
           <a href="tel:+27692396132" class="nav-phone" aria-label="Call 069 239 6132" onclick="gtag('event','click',{event_category:'Phone',event_label:'Phone Click'})"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 069 239 6132</a>
           <a href="/quote/" class="btn btn-outline btn-sm">Get Free Assessment</a>
           <a href="/contact/" class="btn btn-primary btn-sm">Get in Touch</a>
@@ -130,7 +130,7 @@
         </div>
       </nav>
     </div>
-  </header>
+  </header><dialog id="homeSearchDialog" class="home-search-dialog"><div class="home-search-top"><h2>Search Excellent Services</h2><button type="button" id="homeSearchClose" aria-label="Close search"><i class="bi bi-x-lg"></i></button></div><label for="homeSearchInput">Find products or services</label><input id="homeSearchInput" type="search" placeholder="Search sanitary bins, soap, pest control..." autocomplete="off"><div id="homeSearchResults" aria-live="polite"></div></dialog>
   <nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
     <p class="mobile-nav-section">Navigation</p>
     <a href="/">Home</a>
@@ -169,35 +169,8 @@
     </section>
 
     <!-- ANCHOR SERVICE BAR -->
-    <div class="anchor-bar" role="navigation" aria-label="Service quick links">
-      <div class="container">
-        <div class="anchor-bar-inner">
-          <a class="anchor-item" href="/sanitary-bin-services-cape-town/"><i class="bi bi-droplet-half"></i> Hygiene &amp; Sanitary</a>
-          <a class="anchor-item" href="/pest-control-cape-town/"><i class="bi bi-bug-fill"></i> Pest Control</a>
-          <a class="anchor-item" href="/facility-management-cape-town/"><i class="bi bi-building-gear"></i> Facility Management</a>
-          <a class="anchor-item" href="/deep-cleaning-services-cape-town/"><i class="bi bi-stars"></i> Deep Cleaning</a>
-          <a class="anchor-item" href="/washroom-hygiene-services-cape-town/"><i class="bi bi-house-door"></i> Washroom Services</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="brands-strip">
-      <div class="container">
-        <div class="brands-strip-inner">
-          <span class="brands-label">Product Brands We Supply</span>
-          <div class="brands-logos">
-            <span class="brand-name">KC Scott&reg;</span>
-            <span class="brand-name">KC Kleenex&reg;</span>
-            <span class="brand-name">Perl&eacute;&reg;</span>
-            <span class="brand-name">Rubbermaid</span>
-            <span class="brand-name">KC Aquarius&trade;</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-   
-    <section class="py-2xl home-services" aria-labelledby="services-heading">
+    <section class="home-brand-band" aria-label="Product brands"><div class="container"><p>Product brands we supply</p><div class="home-brand-names"><span>Scott</span><span>Kleenex</span><span>Perl&eacute;</span><span>Rubbermaid</span><span>Aquarius</span></div><a href="/products/">Browse products <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div></section>
+<section class="py-2xl home-services" aria-labelledby="services-heading">
 <div class="container">
 <div class="section-head"><h2 class="section-title-lg" id="services-heading">Our Products and Services</h2><p class="section-lead">Professional hygiene and facility solutions for businesses, schools and commercial properties.</p></div>
 <div class="home-service-grid">
@@ -402,5 +375,5 @@
   <a href="https://wa.me/27692396132" class="wa-float" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer" onclick="gtag('event','click',{event_category:'WhatsApp',event_label:'WhatsApp Click'})"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
   <div class="toast" id="toast" role="alert" aria-live="polite"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span id="toastMessage"></span></div>
   <script src="/assets/js/main.js"></script>
-</body>
+<script>(()=>{const entries=[["Sanitary bin rental and servicing","/sanitary-bin-services-cape-town/"],["Pest control","/pest-control-cape-town/"],["Facility management","/facility-management-cape-town/"],["Deep cleaning","/deep-cleaning-services-cape-town/"],["Washroom hygiene","/washroom-hygiene-services-cape-town/"],["Hygiene products catalogue","/products/"],["Contact","/contact/"],["Free assessment","/quote/"],["Breeze Sani Bin 22L with Pedal","/products/item/breeze-sani-bin-22l-with-pedal/"],["Sani Bin 19L","/products/item/sani-bin-19l/"],["KC Aquarius V3 Slimroll Hand Towel Dispenser, White","/products/item/kc-aquarius-v3-slimroll-hand-towel-dispenser-white/"],["KC Scott 110C Control Slimroll Hand Towels","/products/item/kc-scott-110c-control-slimroll-hand-towels/"],["Twinsaver 1 Ply Control Hand Towel","/products/item/twinsaver-1-ply-control-hand-towel/"],["KC Aquarius V1 Slimroll Hand Towel Dispenser","/products/item/kc-aquarius-v1-slimroll-hand-towel-dispenser/"],["KC Scott 125 Slimroll Hand Towels","/products/item/kc-scott-125-slimroll-hand-towels/"],["KC Aquarius Scott Max Rolled Hand Towel Dispenser","/products/item/kc-aquarius-scott-max-rolled-hand-towel-dispenser/"],["KC Scott 200C Control Rolled Hand Towels","/products/item/kc-scott-200c-control-rolled-hand-towels/"],["KC Kleenex 150C Rolled Hand Towel","/products/item/kc-kleenex-150c-rolled-hand-towel/"],["KC Aquarius Small Roll Double Toilet Roll Dispenser","/products/item/kc-aquarius-small-roll-double-toilet-roll-dispenser/"],["KC Kleenex Standard Roll Toilet Tissue, Unwrapped","/products/item/kc-kleenex-standard-roll-toilet-tissue-unwrapped/"],["KC Kleenex Standard Roll Toilet Tissue, Wrapped","/products/item/kc-kleenex-standard-roll-toilet-tissue-wrapped/"],["H-Cut Towel Dispenser","/products/item/prime-h-cut-towel-dispenser/"],["Supertowel Rolled Paper","/products/item/supertowel-rolled-paper/"],["T450 Rolled Paper","/products/item/prime-t450-rolled-paper/"],["Q-Cut Rolled Paper","/products/item/prime-q-cut-rolled-paper/"],["H-Fold Large Dispenser","/products/item/h-fold-large-dispenser/"],["PH-Fold Small Dispenser","/products/item/ph-fold-small-dispenser/"],["Q-Fold Stainless Steel Dispenser","/products/item/q-fold-stainless-steel-dispenser/"],["Q-Fold Hand Towel","/products/item/q-fold-hand-towel/"],["Super-Fold Hand Towel","/products/item/super-fold-hand-towel/"],["KC Impi Wall Stand","/products/item/kc-impi-wall-stand/"],["KC WypAll Jumbo Small L10 Standard Roll Wipers","/products/item/kc-wypall-jumbo-small-l10-standard-roll-wipers/"],["KC Floor Stand Dispenser","/products/item/kc-floor-stand-dispenser/"],["KC WypAll Jumbo 165 Wiper L10 Large Roll Wipers","/products/item/kc-wypall-jumbo-165-wiper-l10-large-roll-wipers/"],["KC WypAll Jumbo Blue L10 Large Roll Wipers","/products/item/kc-wypall-jumbo-blue-l10-large-roll-wipers/"],["KC WypAll Jumbo 2-Ply L20 Large Roll Wipers","/products/item/kc-wypall-jumbo-2-ply-l20-large-roll-wipers/"],["TR2 and TR3 Toilet Roll Dispenser, White","/products/item/prime-tr2-and-tr3-toilet-roll-dispenser-white/"],["Dreamsoft Unwrapped 1-Ply","/products/item/dreamsoft-unwrapped-1-ply/"],["Dreamsoft Unwrapped 2-Ply","/products/item/dreamsoft-unwrapped-2-ply/"],["Dreamsoft Wrapped 1-Ply","/products/item/prime-dreamsoft-wrapped-1-ply/"],["Perlé Foam Blue","/products/item/prime-perle-foam-blue/"],["Perlé Foam Clear","/products/item/prime-perle-foam-clear/"],["Perlé Foam Aloe Vera","/products/item/prime-perle-foam-aloe-vera/"],["Perlé Bio Citrus Hand Soap","/products/item/prime-perle-bio-citrus-hand-soap/"],["H-Fill Auto Soap Dispenser","/products/item/prime-h-fill-auto-soap-dispenser/"],["H-Fill Manual Soap Dispenser","/products/item/prime-h-fill-manual-soap-dispenser/"],["Perlé San Gel","/products/item/prime-perle-san-gel/"],["M-Fill Auto Soap Dispenser","/products/item/prime-m-fill-auto-soap-dispenser/"],["M-Fill Manual Soap Dispenser","/products/item/prime-m-fill-manual-soap-dispenser/"],["Perlé Foam Soap Sachet Refills, Aloe Vera","/products/item/prime-perle-foam-soap-sachet-refills-aloe-vera/"],["Perlé San Gel Manual","/products/item/prime-perle-san-gel-manual/"],["KC Aquarius Manual Hand Cleanser Dispenser, White","/products/item/kc-aquarius-manual-hand-cleanser-dispenser-white/"],["KC Kleenex Everyday Use Hand Cleanser","/products/item/kc-kleenex-everyday-use-hand-cleanser/"],["KC Scott Control Foam Frequent Use Hand Cleanser","/products/item/kc-scott-control-foam-frequent-use-hand-cleanser/"],["KC Scott Control Alcohol Foam Hand Sanitiser","/products/item/kc-scott-control-alcohol-foam-hand-sanitiser/"],["Rubbermaid Spray Soap Dispenser, White","/products/item/rubbermaid-spray-soap-dispenser-white/"],["Rubbermaid Spray Lotion Soap","/products/item/rubbermaid-spray-lotion-soap/"],["Rubbermaid Spray Cleanser Alcohol Hand Rub","/products/item/rubbermaid-spray-cleanser-alcohol-hand-rub/"],["Rubbermaid Microburst Auto Dispenser, White","/products/item/rubbermaid-microburst-auto-dispenser-white/"],["Rubbermaid Microburst 3000 Rain Forest","/products/item/rubbermaid-microburst-3000-rain-forest/"],["Rubbermaid Microburst 3000 Perceptions","/products/item/rubbermaid-microburst-3000-perceptions/"],["Rubbermaid Microburst 3000 Kilimanjaro","/products/item/rubbermaid-microburst-3000-kilimanjaro/"],["Rubbermaid Microburst 3000 Expressions","/products/item/rubbermaid-microburst-3000-expressions/"],["Rubbermaid Microburst 3000 Devotions","/products/item/rubbermaid-microburst-3000-devotions/"]];const d=document.getElementById('homeSearchDialog'),q=document.getElementById('homeSearchInput'),r=document.getElementById('homeSearchResults');const render=()=>{const terms=q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);r.replaceChildren();const matches=terms.length?entries.filter(([name])=>terms.every(t=>name.toLowerCase().includes(t))).slice(0,20):entries.slice(0,8);if(!matches.length){r.textContent='No matching products or services.';return}for(const [name,url] of matches){const a=document.createElement('a');a.href=url;const tmp=document.createElement('textarea');tmp.innerHTML=name;a.textContent=tmp.value;r.append(a)}};document.getElementById('homeSearchOpen').onclick=()=>{d.showModal();render();q.focus()};document.getElementById('homeSearchClose').onclick=()=>d.close();q.addEventListener('input',render)})();</script></body>
 </html>
