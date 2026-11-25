@@ -431,7 +431,7 @@
       background-position: center 40%;
       background-repeat: no-repeat;
       position: relative;
-      padding: calc(var(--total-nav) + 3.5rem) 0 4rem;
+      padding: calc(var(--total-nav) + 2rem) 0 3.5rem;
     }
     /* Dark overlay so white text stays readable over the banner */
     .page-hero::before {
