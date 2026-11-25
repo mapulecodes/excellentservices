@@ -65,7 +65,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
+<style>
+.home-services .section-head{text-align:center;margin:0 auto 2.5rem}.home-services .section-lead{margin:1rem auto 0;max-width:680px}.home-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.home-service-tile{display:flex;flex-direction:column;align-items:flex-start;padding:30px;background:#fff;border:1px solid #dce3e9;border-radius:8px;text-decoration:none;color:var(--navy);transition:background .2s,border-color .2s,transform .2s}.home-service-tile:hover,.home-service-tile:focus-visible{background:#f5faf9;border-color:#008b84;transform:translateY(-3px)}.home-service-icon{font-size:2.3rem;color:#008b84;line-height:1;margin-bottom:20px}.home-service-tile h3{font-size:1.2rem;line-height:1.35;margin:0 0 12px}.home-service-tile p{font-size:1rem;line-height:1.65;color:var(--text-muted);margin:0 0 24px}.home-service-link{display:flex;align-items:center;gap:8px;margin-top:auto;color:#007b75;font-weight:600;font-size:.95rem}@media(max-width:900px){.home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.home-service-grid{grid-template-columns:1fr;gap:12px}.home-service-tile{padding:22px}.home-services .section-head{margin-bottom:1.5rem}}
+</style></head>
 <body>
   <div class="top-bar" id="topBar">
     <div class="container">
@@ -195,53 +197,17 @@
     </div>
 
    
-    <section class="py-2xl" aria-labelledby="services-heading">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="overline">What We Offer</span>
-          <h2 class="section-title-lg" id="services-heading">Services for Your Facility</h2>
-          <p class="section-lead">A complete range of professional hygiene and facility maintenance services, delivered consistently across Cape Town and the Western Cape.</p>
-        </div>
-        <div class="service-cards">
-          <a class="service-card reveal" href="/sanitary-bin-services-cape-town/" aria-label="Hygiene and Sanitary Services">
-            <div class="service-card-num">Service 01</div>
-            <h3>Hygiene &amp; Sanitary Services</h3>
-            <p>Sanitary bin rental, feminine hygiene units, nappy disposal, regular scheduled servicing, paper products and washroom consumables supply.</p>
-            <span class="service-card-link">Learn More <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a class="service-card reveal reveal-delay-1" href="/pest-control-cape-town/" aria-label="Pest Control Services">
-            <div class="service-card-num">Service 02</div>
-            <h3>Pest Control</h3>
-            <p>Professional pest management for schools, restaurants, hotels and commercial properties. Safe, preventative treatment programmes.</p>
-            <span class="service-card-link">Learn More <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a class="service-card reveal reveal-delay-2" href="/products/" aria-label="Hygiene Products Supply">
-            <div class="service-card-num">Service 03</div>
-            <h3>Hygiene Products Supply</h3>
-            <p>KC Scott, KC Kleenex, Perl&eacute; and Rubbermaid dispensers and consumables &mdash; hand towels, tissue, soaps, sanitisers and air fresheners.</p>
-            <span class="service-card-link">View Products <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a class="service-card reveal" href="/facility-management-cape-town/" aria-label="Facility Management Services">
-            <div class="service-card-num">Service 04</div>
-            <h3>Facility Management</h3>
-            <p>End-to-end facility management under one contract. Consumable stock management, washroom coordination, service documentation and single-point accountability.</p>
-            <span class="service-card-link">Learn More <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <a class="service-card reveal reveal-delay-1" href="/deep-cleaning-services-cape-town/" aria-label="Deep Cleaning Services">
-            <div class="service-card-num">Service 05</div>
-            <h3>Deep Cleaning</h3>
-            <p>Industrial-grade deep cleaning for washrooms, kitchens, offices and commercial facilities. Pre/post-event cleans and annual sanitisation contracts available.</p>
-            <span class="service-card-link">Learn More <i class="bi bi-arrow-right"></i></span>
-          </a>
-          <div class="service-card reveal reveal-delay-2" style="background:var(--navy); cursor:default;">
-            <div class="service-card-num" style="color:rgba(255,255,255,0.3);">Est. 2013</div>
-            <h3 style="color:white; font-size:1.375rem; line-height:1.2; letter-spacing:-0.02em;">Need Hygiene Products?</h3>
-            <p style="color:rgba(255,255,255,0.5);">Browse dispensers, paper products, hand soap and air care supplies in our commercial product catalogue.</p>
-            <a href="/products/" class="btn btn-teal btn-sm" style="margin-top:0.5rem;">Browse Catalogue</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="py-2xl home-services" aria-labelledby="services-heading">
+<div class="container">
+<div class="section-head"><h2 class="section-title-lg" id="services-heading">Our Products and Services</h2><p class="section-lead">Professional hygiene and facility solutions for businesses, schools and commercial properties.</p></div>
+<div class="home-service-grid">
+<a class="home-service-tile" href="/sanitary-bin-services-cape-town/"><i class="bi bi-droplet-half home-service-icon" aria-hidden="true"></i><h3>Hygiene &amp; Sanitary Services</h3><p>Sanitary bin rental, scheduled servicing and hygienic waste disposal.</p><span class="home-service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+<a class="home-service-tile" href="/pest-control-cape-town/"><i class="bi bi-bug home-service-icon" aria-hidden="true"></i><h3>Pest Control</h3><p>Preventative pest management for commercial and educational facilities.</p><span class="home-service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+<a class="home-service-tile" href="/products/"><i class="bi bi-box-seam home-service-icon" aria-hidden="true"></i><h3>Hygiene Products</h3><p>Commercial dispensers, paper products, soaps, sanitisers and air care.</p><span class="home-service-link">View Products <i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+<a class="home-service-tile" href="/facility-management-cape-town/"><i class="bi bi-building-gear home-service-icon" aria-hidden="true"></i><h3>Facility Management</h3><p>Coordinated facility services, stock management and service documentation.</p><span class="home-service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+<a class="home-service-tile" href="/deep-cleaning-services-cape-town/"><i class="bi bi-stars home-service-icon" aria-hidden="true"></i><h3>Deep Cleaning</h3><p>Professional deep cleaning for washrooms, kitchens and commercial premises.</p><span class="home-service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+<a class="home-service-tile" href="/washroom-hygiene-services-cape-town/"><i class="bi bi-house-door home-service-icon" aria-hidden="true"></i><h3>Washroom Hygiene</h3><p>Washroom servicing, dispensers and consumable replenishment.</p><span class="home-service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></span></a>
+</div></div></section>
 
     <!-- INDUSTRIES SERVED -->
     <section class="industries-section py-2xl" aria-labelledby="industries-heading">
