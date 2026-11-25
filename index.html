@@ -67,7 +67,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 <style>
 .home-services .section-head{text-align:center;margin:0 auto 2.5rem}.home-services .section-lead{margin:1rem auto 0;max-width:680px}.home-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.home-service-tile{display:flex;flex-direction:column;align-items:flex-start;padding:30px;background:#fff;border:1px solid #dce3e9;border-radius:8px;text-decoration:none;color:var(--navy);transition:background .2s,border-color .2s,transform .2s}.home-service-tile:hover,.home-service-tile:focus-visible{background:#f5faf9;border-color:#008b84;transform:translateY(-3px)}.home-service-icon{font-size:2.3rem;color:#008b84;line-height:1;margin-bottom:20px}.home-service-tile h3{font-size:1.2rem;line-height:1.35;margin:0 0 12px}.home-service-tile p{font-size:1rem;line-height:1.65;color:var(--text-muted);margin:0 0 24px}.home-service-link{display:flex;align-items:center;gap:8px;margin-top:auto;color:#007b75;font-weight:600;font-size:.95rem}@media(max-width:900px){.home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.home-service-grid{grid-template-columns:1fr;gap:12px}.home-service-tile{padding:22px}.home-services .section-head{margin-bottom:1.5rem}}
-</style><style>.home-search-toggle{border:0;background:transparent;color:var(--navy);font-size:1.25rem;cursor:pointer;padding:10px;flex-shrink:0}.home-search-dialog{position:fixed;inset:0;margin:auto;width:min(620px,92vw);max-height:80vh;overflow:auto;border:1px solid #dce3e9;border-radius:10px;padding:24px;background:white;color:var(--navy);z-index:9999}.home-search-dialog::backdrop{background:#101e39aa}.home-search-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.home-search-top button{background:none;border:0;padding:10px;cursor:pointer}.home-search-dialog input{width:100%;padding:12px;border:1px solid #a9b4c1;border-radius:5px;margin:8px 0 16px;font:inherit}.home-search-dialog a{display:block;padding:12px 0;border-bottom:1px solid #e5e9ed;color:var(--navy)}.home-brand-band{background:#f7f8f9;padding:26px 0;border-bottom:1px solid #e5e9ed}.home-brand-band .container{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.home-brand-band p{font-size:.9rem;font-weight:600;margin:0}.home-brand-names{display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,48px);flex-wrap:wrap;color:#35465b;font-size:1.1rem;font-weight:700}.home-brand-band a{color:#007b75;font-weight:600;font-size:.9rem}@media(max-width:700px){.home-brand-band .container{flex-direction:column;gap:16px}.home-brand-names{font-size:1rem}.home-search-toggle{display:inline-flex}}</style><style>.home-original-banner{position:relative;display:block;background:linear-gradient(90deg,rgba(13,27,62,.88),rgba(13,27,62,.65) 60%,rgba(13,27,62,.45)),url('https://raw.githubusercontent.com/mapulecodes/fridayimages/refs/heads/main/images2/excellbanner.png') center 40%/cover no-repeat;min-height:0;border-bottom:3px solid var(--teal)}.home-original-banner .hero-left{width:100%;max-width:none;background:transparent;padding:clamp(48px,7vw,100px) 0}.home-original-banner .hero-left-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}.home-original-banner .hero-title,.home-original-banner .hero-body{max-width:720px}@media(max-width:760px){.home-original-banner .hero-left{padding:48px 0}.home-original-banner .hero-left-inner{padding:0 20px}}</style></head>
+</style><style>.home-search-toggle{border:0;background:transparent;color:var(--navy);font-size:1.25rem;cursor:pointer;padding:10px;flex-shrink:0}.home-search-dialog{position:fixed;inset:0;margin:auto;width:min(620px,92vw);max-height:80vh;overflow:auto;border:1px solid #dce3e9;border-radius:10px;padding:24px;background:white;color:var(--navy);z-index:9999}.home-search-dialog::backdrop{background:#101e39aa}.home-search-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.home-search-top button{background:none;border:0;padding:10px;cursor:pointer}.home-search-dialog input{width:100%;padding:12px;border:1px solid #a9b4c1;border-radius:5px;margin:8px 0 16px;font:inherit}.home-search-dialog a{display:block;padding:12px 0;border-bottom:1px solid #e5e9ed;color:var(--navy)}.home-brand-band{background:#f7f8f9;padding:26px 0;border-bottom:1px solid #e5e9ed}.home-brand-band .container{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.home-brand-band p{font-size:.9rem;font-weight:600;margin:0}.home-brand-names{display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,48px);flex-wrap:wrap;color:#35465b;font-size:1.1rem;font-weight:700}.home-brand-band a{color:#007b75;font-weight:600;font-size:.9rem}@media(max-width:700px){.home-brand-band .container{flex-direction:column;gap:16px}.home-brand-names{font-size:1rem}.home-search-toggle{display:inline-flex}}</style></head>
 <body>
   <div class="top-bar" id="topBar">
     <div class="container">
@@ -150,7 +150,7 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero home-original-banner" aria-label="Hero">
+    <section class="hero" aria-label="Hero">
       <div class="hero-left">
         <div class="hero-left-inner">
           <h1 class="hero-title reveal reveal-delay-1">Commercial Hygiene<br><em>&amp; Pest Control</em><br>in Cape Town</h1>
@@ -162,7 +162,10 @@
 
         </div>
       </div>
-      
+      <div class="hero-right" aria-hidden="true">
+        <img src="https://raw.githubusercontent.com/mapulecodes/fridayimages/refs/heads/main/images/me1.png" alt="Excellent Services professional team member" loading="eager" onerror="this.parentElement.style.background='var(--navy-mid)'">
+
+      </div>
     </section>
 
     <!-- ANCHOR SERVICE BAR -->
